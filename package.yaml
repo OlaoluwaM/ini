@@ -1,0 +1,100 @@
+name: ini
+version: 0.1.0.0
+github: "OlaoluwaM/ini"
+license: BSD-3-Clause
+author: "Olaoluwa Mustapha"
+maintainer: "Olaoluwa Mustapha"
+copyright: "2025 Olaoluwa Mustapha"
+
+extra-source-files:
+  - README.md
+  - CHANGELOG.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description: Please see the README on GitHub at <https://github.com/OlaoluwaM/ini#readme>
+
+dependencies:
+  - attoparsec
+  - base >= 4.7 && < 5
+  - containers
+  - pretty-simple
+  - raw-strings-qq
+  - text
+
+default-extensions:
+  - AllowAmbiguousTypes
+  - ApplicativeDo
+  - BlockArguments
+  - DataKinds
+  - DeriveAnyClass
+  - DerivingStrategies
+  - DerivingVia
+  - DuplicateRecordFields
+  - FunctionalDependencies
+  - GADTs
+  - GeneralizedNewtypeDeriving
+  - ImportQualifiedPost
+  - LambdaCase
+  - NoFieldSelectors
+  - NamedFieldPuns
+  - NoStarIsType
+  - OverloadedLabels
+  - OverloadedRecordDot
+  - OverloadedStrings
+  - PackageImports
+  - PatternSynonyms
+  - QuasiQuotes
+  - RecordWildCards
+  - StrictData
+  - TypeApplications
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Widentities
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wmissing-deriving-strategies
+  - -Wmissing-export-lists
+  - -Wmissing-home-modules
+  - -Wno-unused-top-binds
+  - -Wpartial-fields
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+  dependencies:
+    - extra
+    - hashable
+    - parser-combinators
+
+executables:
+  ini-exe:
+    main: Main.hs
+    source-dirs: app
+    ghc-options:
+      - -rtsopts
+      - -threaded
+      - -with-rtsopts=-N
+    dependencies:
+      - ini
+
+tests:
+  ini-test:
+    main: Spec.hs
+    source-dirs: test
+    ghc-options:
+      - -rtsopts
+      - -threaded
+      - -with-rtsopts=-N
+    dependencies:
+      - filepath
+      - hspec
+      - hspec-discover
+      - ini
