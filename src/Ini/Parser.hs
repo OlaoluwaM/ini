@@ -1,4 +1,4 @@
-module Lib where
+module Ini.Parser where
 
 import Data.Attoparsec.Text
 

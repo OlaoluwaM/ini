@@ -1,6 +1,6 @@
-module SampleDataSpec where
+module Ini.SampleDataSpec where
 
-import Lib
+import Ini.Parser
 import Test.Hspec
 
 import Data.Map.Strict qualified as Map

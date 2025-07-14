@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Ini.Parser
   other-modules:
       Paths_ini
   autogen-modules:
@@ -120,8 +120,8 @@ test-suite ini-test
   type: exitcode-stdio-1.0
   main-is: Spec.hs
   other-modules:
-      LibSpec
-      SampleDataSpec
+      Ini.ParserSpec
+      Ini.SampleDataSpec
       Paths_ini
   autogen-modules:
       Paths_ini
