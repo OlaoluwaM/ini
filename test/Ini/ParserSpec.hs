@@ -1,4 +1,4 @@
-module Ini.ParserSpec where
+module Ini.ParserSpec (spec) where
 
 import Ini.Parser
 import Test.Hspec

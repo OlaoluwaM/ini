@@ -122,6 +122,8 @@ test-suite ini-test
   other-modules:
       Ini.ParserSpec
       Ini.SampleDataSpec
+      LibSpec
+      SampleDataSpec
       Paths_ini
   autogen-modules:
       Paths_ini

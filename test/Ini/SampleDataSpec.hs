@@ -1,4 +1,4 @@
-module Ini.SampleDataSpec where
+module Ini.SampleDataSpec (spec) where
 
 import Ini.Parser
 import Test.Hspec
